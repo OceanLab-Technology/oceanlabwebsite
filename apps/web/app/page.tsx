@@ -1,12 +1,28 @@
-import { Button } from "@workspace/ui/components/button"
-
+import HeroSection from "@/components/hero/hero-section"
+import Features from "@/components/Features/Features"
+import LogoCloud from "@/components/logoCloud/logoCloud"
+import StatsSection from "@/components/stats/stats"
+import MVPFeatures from "@/components/MVP/MVPFeatures"
+import MVPProcess from "@/components/MVP/MVPProcess"
+import Enterprise from "@/components/Enterprise/enterprise"
+import AI from "@/components/AI/ai"
+import ProjectsSectionDemo from "@/components/project/projects"
+import Test from "@/components/testimonials/test"
+import GlowEffectCardBackground from "@/components/book/book"
 export default function Page() {
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-2xl font-bold">Hello World</h1>
-        <Button size="sm">Button</Button>
-      </div>
+    <div>
+      <HeroSection />
+      <LogoCloud />
+      <Features/>
+      <StatsSection/>
+      <MVPFeatures/>
+      <MVPProcess/>
+      <Enterprise/>
+      <AI/>
+      <ProjectsSectionDemo />
+      <Test />
+      <GlowEffectCardBackground />
     </div>
   )
 }
