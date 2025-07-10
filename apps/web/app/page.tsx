@@ -9,6 +9,7 @@ import AI from "@/components/AI/ai"
 import ProjectsSectionDemo from "@/components/project/projects"
 import Test from "@/components/testimonials/test"
 import GlowEffectCardBackground from "@/components/book/book"
+import FooterSection from "@/components/footer/footer"
 export default function Page() {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function Page() {
       <ProjectsSectionDemo />
       <Test />
       <GlowEffectCardBackground />
+      <FooterSection/>
     </div>
   )
 }

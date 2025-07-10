@@ -1,11 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Logo } from '@/components/hero/logo'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@workspace/ui/components/ui/button'
+import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
+
 
 import React from 'react'
 import { cn } from '@workspace/ui/lib/utils'
+import { SVGComponent3 } from './log'
 
 const menuItems = [
     { name: 'Features', href: '#link' },
@@ -17,6 +20,15 @@ const menuItems = [
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
+    useEffect(() => {
+        (async function () {
+            const cal = await getCalApi({ namespace: "30min" });
+            cal("ui", {
+                hideEventTypeDetails: false,
+                layout: "month_view",
+            });
+        })();
+    }, []);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -33,12 +45,25 @@ export const HeroHeader = () => {
                 <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full justify-between lg:w-auto">
-                            <Link
+                            {/* <Link
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <Logo />
+                                <SVGComponent3 />
+                                <img src="/a.svg" alt="" srcset="" width={}/>
+                        </Link> */}
+                            <Link
+                                href="/"
+                                aria-label="Go to homepage"
+                                className="flex items-center space-x-2 hover:opacity-80"
+                            >
+                                <SVGComponent3 />
+                                <span className="text-foreground font-semibold -ml-3">OceanLab</span>
+                                {/* Or use the image:
+                                    <Image src="/a.svg" alt="Logo" width={40} height={40} />
+                                */}
                             </Link>
+
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
@@ -87,7 +112,7 @@ export const HeroHeader = () => {
                                         <span>Login</span>
                                     </Link>
                                 </Button> */}
-                                <Button
+                                {/* <Button
                                     asChild
                                     size="sm"
                                     className={cn(isScrolled && 'lg:hidden')}>
@@ -103,11 +128,38 @@ export const HeroHeader = () => {
                                         <span>Book Now</span>
                                     </Link>
                                 </Button>
+                                https://cal.com/vanshdev/30min */}
+                                <Button
+                                    asChild
+                                    size="sm"
+                                    className={cn(isScrolled && "lg:hidden")}
+                                    data-cal-namespace="30min"
+                                    data-cal-link="vanshdev/30min"
+                                    data-cal-config='{"layout":"month_view"}'
+                                >
+                                    <Link href="#">
+                                        <span>Book a Call</span>
+                                    </Link>
+                                </Button>
+
+                                <Button
+                                    asChild
+                                    size="sm"
+                                    className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
+                                    data-cal-namespace="30min"
+                                    data-cal-link="vanshdev/30min"
+                                    data-cal-config='{"layout":"month_view"}'
+                                >
+                                    <Link href="#">
+                                        <span>Book a Call</span>
+                                    </Link>
+                                </Button>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-        </header>
+        </header >
     )
 }
