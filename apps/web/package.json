@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
+    "@vercel/analytics": "^1.5.0",
     "@workspace/ui": "workspace:*",
     "framer-motion": "^12.23.0",
     "lucide-react": "^0.475.0",

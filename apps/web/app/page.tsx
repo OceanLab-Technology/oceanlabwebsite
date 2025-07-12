@@ -11,6 +11,7 @@ import Test from "@/components/testimonials/test"
 import GlowEffectCardBackground from "@/components/book/book"
 import FooterSection from "@/components/footer/footer"
 import Head from "next/head"
+import {Analytics} from "@vercel/analytics/next";
 
 export default function Page() {
   return (
@@ -59,6 +60,7 @@ export default function Page() {
 
       {/* Page Sections */}
       <main>
+        <Analytics />
         <HeroSection />
         <LogoCloud />
         <Features />
