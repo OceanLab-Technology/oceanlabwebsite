@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Oceanlab MVP Builder",
     description: "Low-code platform to launch AI-powered MVPs rapidly.",
-    imageUrl: "/images/projects/mvp-builder.png",
+    imageUrl: "/Archive/1.png",
     categories: ["Web", "MVP"],
     techStack: ["Next.js", "OpenAI", "Supabase"],
     href: "https://oceanlab.dev/mvp-builder"
@@ -54,14 +54,63 @@ const projects = [
   {
     title: "AI Monitoring Dashboard",
     description: "DevOps dashboard to monitor AI pipelines in real-time.",
-    imageUrl: "/images/projects/devops-dashboard.png",
+    imageUrl: "/Archive/2.png",
     categories: ["DevOps", "App"],
     techStack: ["Go", "Docker", "Grafana"],
   },
   {
     title: "Design System Explorer",
     description: "Internal design system for product teams at scale.",
-    imageUrl: "/images/projects/design-explorer.png",
+    imageUrl: "/Archive/3.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+  {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/4.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/5.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/6.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/7.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/8.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/9.png",
+    categories: ["Design", "System"],
+    techStack: ["Figma", "Tailwind", "Storybook"]
+  },
+    {
+    title: "Design System Explorer",
+    description: "Internal design system for product teams at scale.",
+    imageUrl: "/Archive/10.png",
     categories: ["Design", "System"],
     techStack: ["Figma", "Tailwind", "Storybook"]
   }

@@ -74,7 +74,7 @@ export function ProjectsSection({
 
         {/* Infinite scrolling project cards */}
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:120s]">
+          <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:350s]">
             <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
               {[...Array(20)].map((_, setIndex) =>
                 projects.map((project, i) => (

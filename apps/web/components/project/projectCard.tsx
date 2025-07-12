@@ -37,7 +37,7 @@ export function ProjectCard({
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
       <div className="p-4 space-y-2">

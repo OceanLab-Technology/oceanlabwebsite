@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader } from '@workspace/ui/components/card'
 import { Settings2, Sparkles, Zap } from 'lucide-react'
 import { ReactNode } from 'react'
-
 export default function Features() {
     return (
         <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
@@ -80,3 +79,4 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
         <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">{children}</div>
     </div>
 )
+

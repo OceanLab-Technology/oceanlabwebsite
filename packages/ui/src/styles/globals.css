@@ -43,6 +43,8 @@
   --sidebar-ring: oklch(0.708 0 0);
   --brand: hsl(266 100% 50%);
   --brand-foreground: hsl(270 100% 98%);
+  --muted-foregroundX: hsl(240, 5.2%, 33.92%);
+  --foregroundX: hsl(240 10% 3.9%);
 }
 
 .dark {
@@ -120,8 +122,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-marquee: marquee var(--duration) linear infinite;
-  --color-brand-foreground: var(----brand-foreground);
-  --color-brand: var(----brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand: var(--brand);
+  
 
   @keyframes marquee {
     from {

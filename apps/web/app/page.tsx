@@ -2,7 +2,7 @@ import HeroSection from "@/components/hero/hero-section"
 import Features from "@/components/Features/Features"
 import LogoCloud from "@/components/logoCloud/logoCloud"
 import StatsSection from "@/components/stats/stats"
-import MVPFeatures from "@/components/MVP/MVPFeatures"
+import FeaturesSection from "@/components/Features/sec"
 import MVPProcess from "@/components/MVP/MVPProcess"
 import Enterprise from "@/components/Enterprise/enterprise"
 import AI from "@/components/AI/ai"
@@ -17,7 +17,9 @@ export default function Page() {
       <LogoCloud />
       <Features/>
       <StatsSection/>
-      <MVPFeatures/>
+      {/* <MVPFeatures/>
+       */}
+      <FeaturesSection/>
       <MVPProcess/>
       <Enterprise/>
       <AI/>

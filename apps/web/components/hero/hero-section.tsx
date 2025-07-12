@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@workspace/ui/components/ui/button'
@@ -8,7 +8,7 @@ import { TextEffect } from '@workspace/ui/components/hero/text-effect'
 import { AnimatedGroup } from '@workspace/ui/components/hero/animated-group'
 import { HeroHeader } from './header'
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, easeOut, motion } from 'framer-motion'
 import { AnimatedGradientText } from '@workspace/ui/components/ui/animated-gradient-text'
 import { cn } from '@workspace/ui/lib/utils'
 import { getCalApi } from '@calcom/embed-react'
@@ -143,7 +143,7 @@ export default function HeroSection() {
                                         </Link>
                                     </div>
                                 </AnimatedGroup> */}
-                                <AnimatedGroup variants={transitionVariants}>
+                                {/* <AnimatedGroup variants={transitionVariants}>
                                     <div className="relative mx-auto w-fit rounded-full p-[1px]" style={{
                                         background: 'linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #F1C40F)'
                                     }}>
@@ -167,11 +167,11 @@ export default function HeroSection() {
                                             </div>
                                         </Link>
                                     </div>
-                                </AnimatedGroup>
-
-
-
-
+                                </AnimatedGroup> */}
+                                <MovingBorderButton
+                                    text="Launched 50+ MVPs in just 3 months"
+                                    href="/explore"
+                                />
 
                                 {/* <RotatingTextLink /> */}
 
@@ -384,4 +384,92 @@ export function RotatingTextLink() {
             </Link>
         </motion.div>
     );
+}
+
+function MovingBorderButton({
+    text = "Launched 50+ MVPs in just 3 months",
+    href = "#link",
+    className = ""
+}: {
+    text?: string;
+    href?: string;
+    className?: string;
+}) {
+    const borderRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const border = borderRef.current;
+        if (!border) return;
+
+        let animationId: number;
+
+        const animateBorder = () => {
+            const now = Date.now() / 1000;
+            const speed = 0.7;
+            const angle = (now * speed * 360) % 360;
+
+            border.style.background = `conic-gradient(from ${angle}deg, #FF5733, #33FF57, #3357FF, #F1C40F, #FF5733)`;
+
+            animationId = requestAnimationFrame(animateBorder);
+        };
+
+        animationId = requestAnimationFrame(animateBorder);
+
+        return () => {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+        };
+    }, []);
+
+    const transitionVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            // transition: { duration: 0.1, ease: easeOut }
+            transition: {
+                duration: 1,     // slower
+                ease: "easeInOut"
+            }
+        }
+    };
+
+    return (
+        <div className={cn("inline-flex", className)}>
+            <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={transitionVariants}
+            >
+                <div className="relative mx-auto w-fit rounded-full p-[1px]">
+                    <div
+                        ref={borderRef}
+                        className="absolute inset-0 rounded-full"
+                        style={{
+                            background: 'linear-gradient(90deg, #FF5733, #33FF57, #3357FF, #F1C40F)'
+                        }}
+                    />
+                    <a
+                        href={href}
+                        className="hover:bg-background dark:hover:border-t-border bg-muted group flex items-center gap-4 rounded-full border border-transparent p-1 pl-4 dark:border-t-white/5 dark:shadow-zinc-950 transition-colors duration-300 relative z-10"
+                    >
+                        <span className="text-foreground text-sm">{text}</span>
+                        <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
+                        <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
+                            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                                <span className="flex size-6">
+                                    <ArrowRight className="m-auto size-3" />
+                                </span>
+                                <span className="flex size-6">
+                                    <ArrowRight className="m-auto size-3" />
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </motion.div>
+        </div>
+    );
+
 }
