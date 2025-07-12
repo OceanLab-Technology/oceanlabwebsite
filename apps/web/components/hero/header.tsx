@@ -8,7 +8,7 @@ import { getCalApi } from "@calcom/embed-react";
 
 import React from 'react'
 import { cn } from '@workspace/ui/lib/utils'
-import { SVGComponent3 } from './log'
+import { SVGComponent4 } from './log'
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -43,8 +43,8 @@ export const HeroHeader = () => {
                                 aria-label="Go to homepage"
                                 className="flex items-center space-x-2 hover:opacity-80"
                             >
-                                <SVGComponent3  width={60} height={60} />
-                                <span className="text-foreground font-semibold -ml-3">OceanLab</span>
+                                <SVGComponent4  width={40} height={40} />
+                                <span className="text-foreground font-semibold">OceanLab</span>
                             </Link>
 
 

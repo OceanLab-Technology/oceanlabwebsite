@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { SVGComponent3 } from '../hero/log'
+import { SVGComponent4 } from '../hero/log'
 
 const links = [
     {
@@ -30,14 +30,17 @@ export default function FooterSection() {
             <div className="mx-auto max-w-5xl px-6">
                 <Link
                     href="/"
-                    aria-label="go home"
-                    className="mx-auto block size-fit flex items-center space-x-2 md:-mb-5">
-                    {/* <Logo /> */}
-                    <SVGComponent3 width={50} height={50} />
-                    <span className="text-foreground font-semibold -ml-3">OceanLab</span>
+                    aria-label="Go home"
+                    className="mx-auto flex flex-col items-center space-y-2 w-fit"
+                >
+                    <SVGComponent4 width={50} height={50} />
+                    <span className="text-foreground font-semibold md:text-xl">
+                        OceanLab
+                    </span>
                 </Link>
 
-                <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
+
+                <div className="my-5 flex flex-wrap justify-center gap-6 text-sm">
                     {links.map((link, index) => (
                         <Link
                             key={index}
@@ -49,7 +52,7 @@ export default function FooterSection() {
                 </div>
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
                     <Link
-                        href="#"
+                        href="https://x.com/oceanlabx"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="X/Twitter"
@@ -66,7 +69,7 @@ export default function FooterSection() {
                         </svg>
                     </Link>
                     <Link
-                        href="#"
+                        href="https://www.linkedin.com/company/oceanlabs/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="LinkedIn"
@@ -83,7 +86,7 @@ export default function FooterSection() {
                         </svg>
                     </Link>
                     <Link
-                        href="#"
+                        href="https://www.linkedin.com/company/oceanlabs/"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Instagram"

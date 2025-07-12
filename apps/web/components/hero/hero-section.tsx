@@ -101,7 +101,7 @@ export default function HeroSection() {
                             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <MovingBorderButton
                                     text="Launched 50+ MVPs in just 3 months"
-                                    href="/explore"
+                                    href="#"
                                 />
                                 <TextEffect
                                     preset="fade-in-blur"
