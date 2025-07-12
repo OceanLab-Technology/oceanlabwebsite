@@ -1,9 +1,7 @@
 import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@workspace/ui/components/logos'
-import { LogoIcon } from '@workspace/ui/components/logo'
 import { cn } from '@workspace/ui/lib/utils'
-// import { Button } from '@workspace/ui/components/ui/button'
-// import Link from 'next/link'
 import { InfiniteSlider } from '@workspace/ui/components/logoCloud/infinite-slider'
+import { SVGComponent3 } from '../hero/log'
 
 export default function IntegrationsSection() {
     return (
@@ -93,22 +91,16 @@ export default function IntegrationsSection() {
                         </div>
                         <div className="absolute inset-0 m-auto flex size-fit justify-center gap-2">
                             <IntegrationCard
-                                className="shadow-black-950/10 size-16 bg-white/25 shadow-xl backdrop-blur-md backdrop-grayscale dark:border-white/10 dark:shadow-white/15"
+                                className="shadow-black-950/10 size-16 bg-white/10 shadow-xl backdrop-blur-md backdrop-grayscale dark:border-white/10 dark:shadow-white/15 w-20 h-20"
                                 isCenter={true}>
-                                <LogoIcon />
+                                {/* <LogoIcon /> */}
+                                <SVGComponent3 width={60} height={60}/>
                             </IntegrationCard>
                         </div>
                     </div>
                     <div className="mx-auto mt-12 max-w-lg space-y-6 text-center">
                         <h2 className="text-balance text-3xl font-semibold md:text-4xl">AI at the Core</h2>
                         <p className="text-muted-foreground">At Oceanlab, AI isn't an add-on — it's the foundation. From LLMs to automation, real-time decision engines, AI Workflows, we build systems that learn, adapt, and scale.</p>
-{/* 
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            asChild>
-                            <Link href="#">Get Started</Link>
-                        </Button> */}
                     </div>
                 </div>
             </div>
@@ -116,12 +108,19 @@ export default function IntegrationsSection() {
     )
 }
 
-const IntegrationCard = ({ children, className, isCenter = false }: { children: React.ReactNode; className?: string; position?: 'left-top' | 'left-middle' | 'left-bottom' | 'right-top' | 'right-middle' | 'right-bottom'; isCenter?: boolean }) => {
-    return (
-        <div className={cn('bg-background relative z-20 flex size-12 rounded-full border', className)}>
-            <div className={cn('m-auto size-fit *:size-5', isCenter && '*:size-8')}>{children}</div>
-        </div>
-    )
-}
-
-
+const IntegrationCard = ({
+  children,
+  className,
+  isCenter = false,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  position?: 'left-top' | 'left-middle' | 'left-bottom' | 'right-top' | 'right-middle' | 'right-bottom';
+  isCenter?: boolean;
+}) => {
+  return (
+    <div className={cn('bg-background relative z-20 flex size-12 rounded-full border', className)}>
+      <div className={cn('m-auto', isCenter && 'flex items-center justify-center')}>{children}</div>
+    </div>
+  );
+};

@@ -1,127 +1,87 @@
-// import { TestimonialsSection } from "@workspace/ui/components/blocks/testimonials-with-marquee"
-
-
-// const testimonials = [
-//   {
-//     author: {
-//       name: "Emma Thompson",
-//       handle: "@emmaai",
-//       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
-//     },
-//     text: "Using this AI platform has transformed how we handle data analysis. The speed and accuracy are unprecedented.",
-//     href: "https://twitter.com/emmaai"
-//   },
-//   {
-//     author: {
-//       name: "David Park",
-//       handle: "@davidtech",
-//       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-//     },
-//     text: "The API integration is flawless. We've reduced our development time by 60% since implementing this solution.",
-//     href: "https://twitter.com/davidtech"
-//   },
-//   {
-//     author: {
-//       name: "Sofia Rodriguez",
-//       handle: "@sofiaml",
-//       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-//     },
-//     text: "Finally, an AI tool that actually understands context! The accuracy in natural language processing is impressive."
-//   }
-// ]
-
-// export default function TestimonialsSectionDemo() {
-//   return (
-//     <TestimonialsSection
-//       title="Trusted by developers worldwide"
-//       description="Join thousands of developers who are already building the future with our AI platform"
-//       testimonials={testimonials}
-//     />
-//   )
-// }
-
 import { ProjectsSection } from "@/components/project/projectSection"
 
 const projects = [
   {
-    title: "Oceanlab MVP Builder",
-    description: "Low-code platform to launch AI-powered MVPs rapidly.",
+    title: "Virtual Medical App",
+    description: "Book virtual doctor appointments and manage health-related services remotely.",
     imageUrl: "/Archive/1.png",
-    categories: ["Web", "MVP"],
-    techStack: ["Next.js", "OpenAI", "Supabase"],
-    href: "https://oceanlab.dev/mvp-builder"
+    categories: ["Medical", "App"],
+    techStack: ["React Native", "Go", "gRPC"]
   },
   {
-    title: "AI Monitoring Dashboard",
-    description: "DevOps dashboard to monitor AI pipelines in real-time.",
+    title: "E-signature Platform",
+    description: "Securely send and sign any agreement digitally.",
     imageUrl: "/Archive/2.png",
-    categories: ["DevOps", "App"],
-    techStack: ["Go", "Docker", "Grafana"],
+    categories: ["MVP", "LegalTech"],
+    techStack: ["Next.js", "AI", "Node.js"]
   },
   {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+    title: "AI Fitness Tracker",
+    description: "Track fitness progress and get personalized AI-powered workouts.",
     imageUrl: "/Archive/3.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Fitness", "Enterprise"],
+    techStack: ["Kotlin", "Swift", "React", "Go"]
   },
   {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+    title: "GitHub Activity Tracker",
+    description: "Track GitHub activity across repositories in real time.",
     imageUrl: "/Archive/4.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Developer Tool", "MVP"],
+    techStack: ["Next.js", "Node.js", "Supabase"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "Testimonial Manager",
+    description: "Collect and display customer video & text testimonials to build trust.",
     imageUrl: "/Archive/5.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Enterprise", "Marketing"],
+    techStack: ["AWS", "React", "Go", "Kubernetes"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "Instagram Growth Automation",
+    description: "Automated tools to grow followers, engagement, and visibility on Instagram.",
     imageUrl: "/Archive/6.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Social Media", "MVP"],
+    techStack: ["Next.js", "Supabase"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "Universal LLM API",
+    description: "Manage and analyze LLM requests with one API across multiple providers.",
     imageUrl: "/Archive/7.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["AI", "Enterprise"],
+    techStack: ["Next.js", "Go", "Azure", "AI"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "AI Meme Generator",
+    description: "Create viral memes easily with AI—no design skills needed.",
     imageUrl: "/Archive/8.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Entertainment", "MVP"],
+    techStack: ["Next.js", "Supabase"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "Scalable AI Blockchain",
+    description: "Fast blockchain (120K TPS) with AI-powered security and Proof of Stake.",
     imageUrl: "/Archive/9.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Blockchain", "Enterprise"],
+    techStack: ["Rust", "Solana", "Next.js", "Go", "AI"]
   },
-    {
-    title: "Design System Explorer",
-    description: "Internal design system for product teams at scale.",
+  {
+    title: "Voice AI Assistant",
+    description: "Enterprise-grade voice AI with real-time communication capabilities.",
     imageUrl: "/Archive/10.png",
-    categories: ["Design", "System"],
-    techStack: ["Figma", "Tailwind", "Storybook"]
+    categories: ["Voice", "Enterprise"],
+    techStack: ["React Native", "Go", "gRPC"]
   }
 ]
 
 export default function ProjectsSectionDemo() {
   return (
-    <ProjectsSection
-      title="Projects we've engineered"
-      description="From MVPs to real-time platforms, our systems are built with scale and intelligence in mind."
-      projects={projects}
-    />
+    <div id="Portfolio">
+      <ProjectsSection
+        title="Projects we've engineered"
+        description="From MVPs to real-time platforms, our systems are built with scale and intelligence in mind."
+        projects={projects}
+      />
+    </div>
+
   )
 }

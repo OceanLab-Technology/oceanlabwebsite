@@ -2,62 +2,67 @@
 import { TestimonialsColumn } from "@workspace/ui/components/blocks/testimonials-columns-1";
 import { motion } from "framer-motion";
 
-
 const testimonials = [
   {
-    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Briana Patton",
-    role: "Operations Manager",
+    text: "Their MVP helped us validate our product-market fit in just 6 weeks. The speed and quality were remarkable, allowing us to secure our seed funding.",
+    image: "https://randomuser.me/api/portraits/men/10.jpg",
+    name: "Jonathan Miller",
+    role: "Co-founder, FinTech Startup"
   },
   {
-    text: "Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-    name: "Bilal Ahmed",
-    role: "IT Manager",
+    text: "The enterprise platform integrated seamlessly with our legacy systems. Scalability and security were top-notch—this team understands corporate needs.",
+    image: "https://randomuser.me/api/portraits/women/11.jpg",
+    name: "Claire Thompson",
+    role: "Enterprise Architect, Global Retail Inc."
   },
   {
-    text: "The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction.",
-    image: "https://randomuser.me/api/portraits/women/3.jpg",
-    name: "Saman Malik",
-    role: "Customer Support Lead",
+    text: "From onboarding to launch, they maintained clear communication and fast iteration cycles. Our AI-powered MVP was live in record time.",
+    image: "https://randomuser.me/api/portraits/men/12.jpg",
+    name: "Luca Romano",
+    role: "CTO, HealthTech Startup"
   },
   {
-    text: "This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface.",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-    name: "Omar Raza",
-    role: "CEO",
+    text: "Their cloud-native ERP transformed our data flow across departments. What impressed us most was the real-time visibility into operations.",
+    image: "https://randomuser.me/api/portraits/women/13.jpg",
+    name: "Ava Chen",
+    role: "Director of Operations, LogisticsCorp"
   },
   {
-    text: "Its robust features and quick support have transformed our workflow, making us significantly more efficient.",
-    image: "https://randomuser.me/api/portraits/women/5.jpg",
-    name: "Zainab Hussain",
-    role: "Project Manager",
+    text: "We launched our beta version with complete backend and auth in under a month. The MVP was stable, extensible, and investor-ready.",
+    image: "https://randomuser.me/api/portraits/men/14.jpg",
+    name: "Tobias Meier",
+    role: "Founder, EduStart"
   },
   {
-    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-    name: "Aliza Khan",
-    role: "Business Analyst",
+    text: "Our AI-enabled enterprise dashboard has become essential. It consolidates insights across teams and enables faster, data-driven decisions.",
+    image: "https://randomuser.me/api/portraits/women/15.jpg",
+    name: "Sophie Dubois",
+    role: "Chief Data Officer, MedSys Group"
   },
   {
-    text: "Our business functions improved with a user-friendly design and positive customer feedback.",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
-    name: "Farhan Siddiqui",
-    role: "Marketing Director",
+    text: "They delivered a robust MVP that gave us a competitive edge. The modular architecture helped us expand features post-launch effortlessly.",
+    image: "https://randomuser.me/api/portraits/men/16.jpg",
+    name: "Diego Morales",
+    role: "Product Lead, SaaS Startup"
   },
   {
-    text: "They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations.",
-    image: "https://randomuser.me/api/portraits/women/8.jpg",
-    name: "Sana Sheikh",
-    role: "Sales Manager",
+    text: "Their understanding of enterprise-grade compliance and scalability made our cloud migration smooth. Support was responsive and strategic.",
+    image: "https://randomuser.me/api/portraits/women/17.jpg",
+    name: "Natalie Fischer",
+    role: "IT Strategy Consultant"
   },
   {
-    text: "Using this ERP, our online presence and conversions significantly improved, boosting business performance.",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
-    name: "Hassan Ali",
-    role: "E-commerce Manager",
+    text: "They built our MVP with incredible speed and precision. The user feedback was overwhelmingly positive, helping us iterate quickly post-launch.",
+    image: "https://randomuser.me/api/portraits/men/18.jpg",
+    name: "Michael O’Connor",
+    role: "Startup Advisor, MVP Ventures"
   },
+  {
+    text: "We operate in a highly regulated industry, and their team ensured all data and integration practices were enterprise-compliant. Excellent partner.",
+    image: "https://randomuser.me/api/portraits/women/19.jpg",
+    name: "Emily Rodriguez",
+    role: "VP Compliance, Finserve Group"
+  }
 ];
 
 
@@ -78,9 +83,6 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
         >
-          {/* <div className="flex justify-center">
-            <div className="border py-1 px-4 rounded-lg">Testimonials</div>
-          </div> */}
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
             What our users say

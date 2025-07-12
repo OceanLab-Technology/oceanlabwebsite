@@ -2,12 +2,12 @@ import { Sparkles, Plus, Globe, ArrowUp } from "lucide-react";
 
 export default function FeaturesSection() {
     return (
-        <div className="bg-white py-24 px-4">
+        <div className="bg-white py-24 px-4" id="MVP">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <h2 className="text-balance text-2xl md:text-3xl font-semibold text-gray-900">
-                        <span className="text-gray-700 font-medium">Empowering Founders with Fast &</span>{" "}
+                    <h2 className="text-balance text-3xl font-semibold text-gray-900 md:text-4xl">
+                        <span className="text-gray-700 font-medium text-3xl md:text-4xl">Empowering Founders with Fast</span>{" "}
                         Scalable MVP Development
                     </h2>
                 </div>

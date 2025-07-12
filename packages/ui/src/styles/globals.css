@@ -124,24 +124,28 @@
   --animate-marquee: marquee var(--duration) linear infinite;
   --color-brand-foreground: var(--brand-foreground);
   --color-brand: var(--brand);
-  
+
 
   @keyframes marquee {
     from {
       transform: translateX(0);
     }
+
     to {
       transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   --animate-gradient: gradient 8s linear infinite;
 
   @keyframes gradient {
@@ -149,9 +153,10 @@
       backgroundPosition: var(--bg-size) 0;
     }
   }
+
   @keyframes gradient {
-  to {
-    backgroundPosition: var(--bg-size) 0;
+    to {
+      backgroundPosition: var(--bg-size) 0;
     }
   }
 }
@@ -160,7 +165,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }

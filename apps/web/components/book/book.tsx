@@ -26,7 +26,7 @@ function CalendarWithGlow() {
 
     if (!isLargeScreen) {
     return (
-            <div className="flex justify-center items-center mt-10 px-4">
+            <div className="flex justify-center items-center mt-10 px-4" id="Book">
             <div className="relative w-full h-[600px] rounded-2xl overflow-hidden p-4">
                 <GlowEffect
                     className="z-0"
@@ -55,7 +55,7 @@ function CalendarWithGlow() {
     );
 }
     return (
-        <div className="flex justify-center items-center mt-25 px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center items-center mt-25 px-4 sm:px-6 lg:px-8" id="Book">
             <div className="relative w-full max-w-[1000px] h-[600px] sm:h-[550px] md:h-[530px] rounded-2xl overflow-hidden p-4 sm:p-6 md:p-10">
                 <GlowEffect
                     className="z-0"

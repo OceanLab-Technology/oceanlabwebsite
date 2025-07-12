@@ -12,25 +12,25 @@ export default function Features() {
 
     const images = {
         'item-1': {
-            image: '/charts.png',
+            image: '/f1.png',
             alt: 'Discover Meetings',
         },
         'item-2': {
-            image: '/music.png',
-            alt: 'Security authentication',
+            image: '/f2.png',
+            alt: 'UI/UX',
         },
         'item-3': {
-            image: '/mail2.png',
-            alt: 'Identity management',
+            image: '/f3.png',
+            alt: 'Develop Your MVP',
         },
         'item-4': {
-            image: '/payments.png',
+            image: '/f4.png',
             alt: 'Analytics dashboard',
         },
     }
 
     return (
-        <section className="py-12 md:py-20 lg:py-32">
+        <section className="py-12 md:py-20 lg:py-32" id="Process">
             <div className="bg-linear-to-b absolute inset-0 -z-10 sm:inset-6 sm:rounded-b-3xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))]"></div>
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">

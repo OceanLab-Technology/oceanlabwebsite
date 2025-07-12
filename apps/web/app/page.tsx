@@ -17,8 +17,6 @@ export default function Page() {
       <LogoCloud />
       <Features/>
       <StatsSection/>
-      {/* <MVPFeatures/>
-       */}
       <FeaturesSection/>
       <MVPProcess/>
       <Enterprise/>
